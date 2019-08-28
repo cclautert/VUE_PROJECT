@@ -7,7 +7,7 @@ npm install
 
 ### Run fake API
 ```
-json-serveatch banco.json
+json-server --watch banco.json
 ```
 
 ### Compiles and hot-reloads for development
