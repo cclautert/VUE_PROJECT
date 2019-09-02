@@ -2,19 +2,24 @@
   <div id="app">    
     <Nav></Nav>
     <div class="marginPrincipal">
-      <Alunos/>
+      <router-view>        
+      </router-view>      
     </div>    
   </div>
 </template>
 
 <script>
-import Alunos from './components/Aluno/Alunos.vue'
-import Nav  from './components/_nav/Nav.vue'
+import Alunos from './components/Aluno/Alunos'
+import Professor from './components/Professor/Professor'
+import Sobre from './components/Sobre/Sobre'
+import Nav  from './components/_nav/Nav'
 
 export default {
   name: 'app',
   components: {
     Alunos,
+    Professor,
+    Sobre,
     Nav
   }
 }
