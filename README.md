@@ -28,9 +28,19 @@ npm install -g json-server
 json-server --watch banco.json
 ```
 
+### If the First run, exec commando to creat node_modules
+```
+npm i
+```
+
 ### Compiles and hot-reloads for development
 ```
 npm run serve
+```
+
+### If you need to access Ui interface
+```
+vue ui
 ```
 
 ### Compiles and minifies for production
