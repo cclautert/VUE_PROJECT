@@ -3,22 +3,38 @@
     {
       "id": 1,
       "nome": "Marcos",
-      "sobrenome": "Xavier"
+      "sobrenome": "Xavier",
+      "professor": {
+        "id": 1,
+        "nome": "Cristiano"
+      }
     },
     {
       "id": 2,
       "nome": "Andre",
-      "sobrenome": "Nouguer"
+      "sobrenome": "Nouguer",
+      "professor": {
+        "id": 1,
+        "nome": "Cristiano"
+      }
     },
     {
       "id": 3,
       "nome": "José",
-      "sobrenome": "Boas"
+      "sobrenome": "Boas",
+      "professor": {
+        "id": 1,
+        "nome": "Cristiano"
+      }
     },
     {
+      "id": 4,
       "nome": "JOÃO",
       "sobrenome": "",
-      "id": 4
+      "professor": {
+        "id": 3,
+        "nome": "Luna"
+      }
     }
   ],
 
@@ -26,29 +42,17 @@
     { 
       "id": 1, 
       "nome": "Cristiano", 
-      "sobrenome": "Lautert",
-      "professor": {
-        "id": 1,
-        "nome": "Marcos"
-      }
+      "sobrenome": "Lautert"      
     },
     { 
       "id": 2, 
       "nome": "Paula", 
-      "sobrenome": "Franco",
-      "professor": {
-        "id": 1,
-        "nome": "Marcos"
-      }
+      "sobrenome": "Franco"
     },
     { 
       "id": 3, 
       "nome": "Luna", 
-      "sobrenome": "Moraes",      
-      "professor": {
-        "id": 2,
-        "nome": "Andre"
-      }
+      "sobrenome": "Moraes"
     }
   ]
 }
