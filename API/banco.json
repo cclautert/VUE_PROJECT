@@ -20,5 +20,35 @@
       "sobrenome": "",
       "id": 4
     }
+  ],
+
+  "professores": [
+    { 
+      "id": 1, 
+      "nome": "Cristiano", 
+      "sobrenome": "Lautert",
+      "professor": {
+        "id": 1,
+        "nome": "Marcos"
+      }
+    },
+    { 
+      "id": 2, 
+      "nome": "Paula", 
+      "sobrenome": "Franco",
+      "professor": {
+        "id": 1,
+        "nome": "Marcos"
+      }
+    },
+    { 
+      "id": 3, 
+      "nome": "Luna", 
+      "sobrenome": "Moraes",      
+      "professor": {
+        "id": 2,
+        "nome": "Andre"
+      }
+    }
   ]
 }
