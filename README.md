@@ -58,5 +58,15 @@ npm run test
 npm run lint
 ```
 
+
+## Problemas com o Git (Erro ao executar Pull)
+```
+git pull / git pull origin master
+```
+## Necessário rodar
+```
+git clean  -d  -fx . / git clean  -d  -f .
+```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
