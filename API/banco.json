@@ -4,6 +4,7 @@
       "id": 1,
       "nome": "Marcos",
       "sobrenome": "Xavier",
+      "dataNasc": "01/02/2002",
       "professor": {
         "id": 1,
         "nome": "Cristiano"
@@ -13,6 +14,7 @@
       "id": 2,
       "nome": "Andre",
       "sobrenome": "Nouguer",
+      "dataNasc": "01/02/2001",
       "professor": {
         "id": 1,
         "nome": "Cristiano"
@@ -22,6 +24,7 @@
       "id": 3,
       "nome": "José",
       "sobrenome": "Boas",
+      "dataNasc": "01/02/1992",
       "professor": {
         "id": 1,
         "nome": "Cristiano"
@@ -31,27 +34,47 @@
       "id": 4,
       "nome": "JOÃO",
       "sobrenome": "",
+      "dataNasc": "01/02/1985",
       "professor": {
         "id": 3,
         "nome": "Luna"
       }
+    },
+    {
+      "nome": "Alex",
+      "sobrenome": "",
+      "dataNasc": "01/02/1980",
+      "professor": {
+        "id": 3,
+        "nome": "Luna"
+      },
+      "id": 5
+    },
+    {
+      "nome": "Bety",
+      "sobrenome": "",
+      "dataNasc": "01/02/2001",
+      "professor": {
+        "id": 2,
+        "nome": "Paula"
+      },
+      "id": 6
     }
   ],
-
   "professores": [
-    { 
-      "id": 1, 
-      "nome": "Cristiano", 
-      "sobrenome": "Lautert"      
+    {
+      "id": 1,
+      "nome": "Cristiano",
+      "sobrenome": "Lautert"
     },
-    { 
-      "id": 2, 
-      "nome": "Paula", 
+    {
+      "id": 2,
+      "nome": "Paula",
       "sobrenome": "Franco"
     },
-    { 
-      "id": 3, 
-      "nome": "Luna", 
+    {
+      "id": 3,
+      "nome": "Luna",
       "sobrenome": "Moraes"
     }
   ]
