@@ -4,10 +4,11 @@
       "id": 1,
       "nome": "Marcos",
       "sobrenome": "Xavier",
-      "dataNasc": "01/02/2002",
+      "dataNasc": "01/02/1980",
       "professor": {
         "id": 1,
-        "nome": "Cristiano"
+        "nome": "Cristiano",
+        "sobrenome": "Lautert"
       }
     },
     {
@@ -41,14 +42,15 @@
       }
     },
     {
+      "id": 5,
       "nome": "Alex",
-      "sobrenome": "",
+      "sobrenome": "Gonsalves",
       "dataNasc": "01/02/1980",
       "professor": {
         "id": 3,
-        "nome": "Luna"
-      },
-      "id": 5
+        "nome": "Luna",
+        "sobrenome": "Moraes"
+      }
     },
     {
       "nome": "Bety",

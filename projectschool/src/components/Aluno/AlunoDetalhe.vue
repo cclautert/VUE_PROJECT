@@ -1,8 +1,8 @@
 <template>
   <div>
     <titulo :texto="`Aluno: ${aluno.nome}`" :btnVoltar="!visualizando">
-        <button class="btn btnEditar" @click="editar()">Editar</button>
-    </titulo>    
+      <button v-show="visualizando" class="btn btnEditar" @click="editar()">Editar</button>
+    </titulo>
     <table>
       <tbody>
         <tr>
@@ -14,38 +14,46 @@
         <tr>
           <td class="colPequeno">Nome:</td>
           <td>
-            <label v-if="visualizando">{{aluno.nome}}</label>
+            <label v-if="visualizando">{{ aluno.nome }}</label>
             <input v-else v-model="aluno.nome" type="text" />
           </td>
         </tr>
         <tr>
           <td class="colPequeno">SobreNome:</td>
           <td>
-            <label v-if="visualizando">{{aluno.sobrenome}}</label>
+            <label v-if="visualizando">{{ aluno.sobrenome }}</label>
             <input v-else v-model="aluno.sobrenome" type="text" />
           </td>
         </tr>
         <tr>
           <td class="colPequeno">Data Nescimento:</td>
           <td>
-            <label v-if="visualizando">{{aluno.dataNasc}}</label>
+            <label v-if="visualizando">{{ aluno.dataNasc }}</label>
             <input v-else v-model="aluno.dataNasc" type="text" />
           </td>
         </tr>
         <tr>
           <td class="colPequeno">Professor:</td>
           <td>
-            <label v-if="visualizando">{{aluno.professor.nome}}</label>
+            <label v-if="visualizando">{{ aluno.professor.nome }}</label>
             <select v-else v-model="aluno.professor">
               <option
                 v-for="(professor, index) in professores"
-                :key="index" v-bind:value="professor"
-              >{{ professor.nome}}</option>
+                :key="index"
+                v-bind:value="professor"
+              >{{ professor.nome }}</option>
             </select>
           </td>
         </tr>
       </tbody>
     </table>
+
+    <div style="margin-top: 10px">
+      <div v-if="!visualizando">
+        <button class="btn btnSalvar" @click="salvar(aluno)">Salvar</button>
+        <button class="btn btnCancelar" @click="cancelar()">Cancelar</button>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -75,36 +83,64 @@ export default {
       .then(professor => (this.professores = professor));
   },
   methods: {
-      editar(){
-          this.visualizando = !this.visualizando;
-      }
+    editar() {
+      this.visualizando = !this.visualizando;
+    },
+    salvar(_aluno) {
+      let _alunoEditar = {
+        id: _aluno.id,
+        nome: _aluno.nome,
+        sobrenome: _aluno.sobrenome,
+        dataNasc: _aluno.dataNasc,
+        professor: _aluno.professor
+      };
+
+      this.$http.put(
+        `http://localhost:3000/alunos/${+_alunoEditar.id}`,
+        _alunoEditar
+      );
+
+      this.visualizando = !this.visualizando;
+    },
+    cancelar() {
+      this.visualizando = !this.visualizando;
+    }
   }
 };
 </script>
 
 <style scoped>
-.btnEditar{
-    float: right;
-    background-color: rgb(76,186,249);
+.btnEditar {
+  float: right;
+  background-color: rgb(76, 186, 249);
 }
-.colPequeno{
-    width: 20%;
-    text-align: right;
-    background-color: rgb(125, 217, 245);
-    font-weight: bold;
+.btnSalvar {
+  float: right;
+  background-color: rgb(79, 196, 68);
 }
-input, select {
-    margin: 0;
-    padding: 5px 10px;
-    font-size: 0.9em;
-    font-family: Montserrat;
-    border-radius: 5px;
-    border: 1px solid silver;
-    background-color: rgb(245,245,245);
-    width: 95%;
+.btnCancelar {
+  float: left;
+  background-color: rgb(249, 186, 92);
+}
+.colPequeno {
+  width: 20%;
+  text-align: right;
+  background-color: rgb(125, 217, 245);
+  font-weight: bold;
+}
+input,
+select {
+  margin: 0;
+  padding: 5px 10px;
+  font-size: 0.9em;
+  font-family: Montserrat;
+  border-radius: 5px;
+  border: 1px solid silver;
+  background-color: rgb(245, 245, 245);
+  width: 95%;
 }
 select {
-    height: 38px;
-    width: 100%;
+  height: 38px;
+  width: 100%;
 }
 </style>

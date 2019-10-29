@@ -49,6 +49,7 @@ body, html{
 }
 
 .btnDanger{
+  font-size: 0.8em !important;
   background-color: #fa4430;
 }
 
