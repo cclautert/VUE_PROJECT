@@ -123,10 +123,7 @@ export default {
   background-color: rgb(249, 186, 92);
 }
 .colPequeno {
-  width: 20%;
-  text-align: right;
-  background-color: rgb(125, 217, 245);
-  font-weight: bold;
+  width: 20%;  
 }
 input,
 select {
