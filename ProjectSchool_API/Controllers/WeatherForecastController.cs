@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -23,7 +24,7 @@ namespace ProjectSchool_API.Controllers
             _logger = logger;
         }
 
-        [HttpGet]
+        /*[HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
             var rng = new Random();
@@ -34,6 +35,17 @@ namespace ProjectSchool_API.Controllers
                 Summary = Summaries[rng.Next(Summaries.Length)]
             })
             .ToArray();
+        }*/
+
+        [HttpGet]
+        public IActionResult ObterResultado()
+        {
+            /*return Ok(new {
+                id = 1,
+                nome = "Teste"
+            });*/
+
+            return this.StatusCode(StatusCodes.Status200OK);
         }
     }
 }
