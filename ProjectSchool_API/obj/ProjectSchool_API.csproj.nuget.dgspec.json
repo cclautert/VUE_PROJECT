@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Cristiano\\Documents\\Estudos\\curso-vue-asp.net\\ProjectSchool_API\\ProjectSchool_API.csproj": {}
+    "c:\\Users\\Cristiano\\Documents\\Estudos\\curso-vue-asp.net\\ProjectSchool_API\\ProjectSchool_API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Cristiano\\Documents\\Estudos\\curso-vue-asp.net\\ProjectSchool_API\\ProjectSchool_API.csproj": {
+    "c:\\Users\\Cristiano\\Documents\\Estudos\\curso-vue-asp.net\\ProjectSchool_API\\ProjectSchool_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Cristiano\\Documents\\Estudos\\curso-vue-asp.net\\ProjectSchool_API\\ProjectSchool_API.csproj",
+        "projectUniqueName": "c:\\Users\\Cristiano\\Documents\\Estudos\\curso-vue-asp.net\\ProjectSchool_API\\ProjectSchool_API.csproj",
         "projectName": "ProjectSchool_API",
-        "projectPath": "C:\\Users\\Cristiano\\Documents\\Estudos\\curso-vue-asp.net\\ProjectSchool_API\\ProjectSchool_API.csproj",
+        "projectPath": "c:\\Users\\Cristiano\\Documents\\Estudos\\curso-vue-asp.net\\ProjectSchool_API\\ProjectSchool_API.csproj",
         "packagesPath": "C:\\Users\\Cristiano\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Cristiano\\Documents\\Estudos\\curso-vue-asp.net\\ProjectSchool_API\\obj\\",
+        "outputPath": "c:\\Users\\Cristiano\\Documents\\Estudos\\curso-vue-asp.net\\ProjectSchool_API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -45,7 +45,11 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "(, )"
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[3.1.0, )"
             }
           },
           "imports": [
