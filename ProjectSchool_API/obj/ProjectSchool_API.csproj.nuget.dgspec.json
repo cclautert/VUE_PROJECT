@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Cristiano\\Documents\\Estudos\\curso-vue-asp.net\\ProjectSchool_API\\ProjectSchool_API.csproj": {}
+    "C:\\Users\\Cristiano\\Documents\\Projetos\\VUE_PROJECT\\ProjectSchool_API\\ProjectSchool_API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Cristiano\\Documents\\Estudos\\curso-vue-asp.net\\ProjectSchool_API\\ProjectSchool_API.csproj": {
+    "C:\\Users\\Cristiano\\Documents\\Projetos\\VUE_PROJECT\\ProjectSchool_API\\ProjectSchool_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Cristiano\\Documents\\Estudos\\curso-vue-asp.net\\ProjectSchool_API\\ProjectSchool_API.csproj",
+        "projectUniqueName": "C:\\Users\\Cristiano\\Documents\\Projetos\\VUE_PROJECT\\ProjectSchool_API\\ProjectSchool_API.csproj",
         "projectName": "ProjectSchool_API",
-        "projectPath": "C:\\Users\\Cristiano\\Documents\\Estudos\\curso-vue-asp.net\\ProjectSchool_API\\ProjectSchool_API.csproj",
+        "projectPath": "C:\\Users\\Cristiano\\Documents\\Projetos\\VUE_PROJECT\\ProjectSchool_API\\ProjectSchool_API.csproj",
         "packagesPath": "C:\\Users\\Cristiano\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Cristiano\\Documents\\Estudos\\curso-vue-asp.net\\ProjectSchool_API\\obj\\",
+        "outputPath": "C:\\Users\\Cristiano\\Documents\\Projetos\\VUE_PROJECT\\ProjectSchool_API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -27,6 +27,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://nuget.syncfusion.com/nuget_xamarin/nuget/getsyncfusionpackages/xamarin": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -45,15 +46,15 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.0, )"
+              "version": "[3.1.3, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "target": "Package",
-              "version": "[3.1.0, )"
+              "version": "[3.1.3, )"
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
-              "version": "[3.1.0, )"
+              "version": "[3.1.3, )"
             }
           },
           "imports": [
@@ -68,8 +69,12 @@
           "warn": true,
           "downloadDependencies": [
             {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.0.1, 3.0.1]"
+            },
+            {
               "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.0.2, 3.0.2]"
+              "version": "[3.0.3, 3.0.3]"
             }
           ],
           "frameworkReferences": {
@@ -80,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
