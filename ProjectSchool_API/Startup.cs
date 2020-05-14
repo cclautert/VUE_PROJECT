@@ -30,7 +30,9 @@ namespace ProjectSchool_API
             services.AddDbContext<DataContext>(
                 x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnection"))
             );
-            services.AddControllers();
+
+            services.AddMvc()
+                .SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
 
             services.AddScoped<IRepository, Repository>();
         }
