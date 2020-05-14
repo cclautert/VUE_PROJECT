@@ -86,9 +86,9 @@ namespace ProjectSchool_API.Data
         {
             IQueryable<Professor> query = _context.Professores;
 
-            if (includeAluno){
+            /*if (includeAluno){
                 query = query.Include(c => c.Alunos);
-            }
+            }*/
 
             query = query
                 .AsNoTracking()
