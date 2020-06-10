@@ -22,6 +22,7 @@ namespace ProjectSchool_API.Controllers
             try
             {
                 var result = await _repo.GetAllProfessoresAsync(true);
+
                 return Ok(result);
             }
             catch (System.Exception)
@@ -35,7 +36,8 @@ namespace ProjectSchool_API.Controllers
         {
             try
             {
-                var result = await _repo.GetProfessorAsyncByID(ProfessorId, true);
+                var result = await _repo.GetProfessorAsyncByID(ProfessorId, false);
+
                 return Ok(result);
             }
             catch (System.Exception)

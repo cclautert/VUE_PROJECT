@@ -22,7 +22,7 @@ namespace ProjectSchool_API.Controllers
             try
             {
                 var result = await _repo.GetAllAlunosAsync(true);
-
+                
                 return Ok(result);
             }
             catch (System.Exception)

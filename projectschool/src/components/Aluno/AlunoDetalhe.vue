@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="!loading">
     <titulo :texto="`Aluno: ${aluno.nome}`" :btnVoltar="!visualizando">
       <button v-show="visualizando" class="btn btnEditar" @click="editar()">Editar</button>
     </titulo>
@@ -8,7 +8,7 @@
         <tr>
           <td class="colPequeno">Matrícula:</td>
           <td>
-            <label>{{aluno.id}}</label>
+            <label>{{ aluno.id }}</label>
           </td>
         </tr>
         <tr>
@@ -36,11 +36,11 @@
           <td class="colPequeno">Professor:</td>
           <td>
             <label v-if="visualizando">{{ aluno.professor.nome }}</label>
-            <select v-else v-model="aluno.professor">
+            <select v-else v-model="aluno.professor.id">
               <option
                 v-for="(professor, index) in professores"
                 :key="index"
-                v-bind:value="professor"
+                v-bind:value="professor.id"
               >{{ professor.nome }}</option>
             </select>
           </td>
@@ -68,21 +68,32 @@ export default {
       professores: {},
       aluno: {},
       id: this.$route.params.id,
-      visualizando: true
+      visualizando: true,
+      loading: true
     };
   },
   created() {
-    this.$http
-      .get("http://localhost:3000/alunos/" + this.id)
-      .then(res => res.json())
-      .then(aluno => (this.aluno = aluno));
-
-    this.$http
-      .get("http://localhost:3000/professores")
-      .then(res => res.json())
-      .then(professor => (this.professores = professor));
+    this.CarregarProfessor();
   },
   methods: {
+    CarregarProfessor(){
+      this.$http
+      .get("http://localhost:5000/api/professor")
+      .then(res => res.json())
+      .then(professor => {
+        this.professores = professor;
+        this.CarregarAluno();
+        });
+    },
+    CarregarAluno(){
+      this.$http
+      .get(`http://localhost:5000/api/aluno/${this.id}`)
+      .then(res => res.json())
+      .then(aluno => {
+        this.aluno = aluno;
+        this.loading = false;
+        });
+    },
     editar() {
       this.visualizando = !this.visualizando;
     },
@@ -92,13 +103,15 @@ export default {
         nome: _aluno.nome,
         sobrenome: _aluno.sobrenome,
         dataNasc: _aluno.dataNasc,
-        professor: _aluno.professor
+        professorid: _aluno.professor.id
       };
 
-      this.$http.put(
-        `http://localhost:3000/alunos/${+_alunoEditar.id}`,
-        _alunoEditar
-      );
+      this.$http
+        .put(`http://localhost:5000/api/aluno/${_alunoEditar.id}`, _alunoEditar)
+        .then(res => res.json())
+        .then(aluno => this.aluno = aluno)
+        .then(() => this.visualizando = true);
+        //_alunoEditar      
 
       this.visualizando = !this.visualizando;
     },
